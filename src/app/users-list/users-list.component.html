@@ -1,0 +1,15 @@
+<table *ngIf="show">
+  <tr>
+    <td>id</td>
+    <td>name</td>
+    <td>username</td>
+    <td>company name</td>
+  </tr>
+  <tr *ngFor="let item of data">
+    <td>{{item.id}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.username}}</td>
+    <td>{{item.company.name}}</td>
+    <td><button (click)="showTodosFor(item.id)">View Todos</button></td>
+  </tr>
+</table>
